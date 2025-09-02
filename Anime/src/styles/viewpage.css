@@ -1,0 +1,131 @@
+.Vcard {
+  display: flex; /* Layout images in a row */
+  gap: 2rem; /* Space between images */
+  padding: 1rem; /* Padding around the container */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.Vcard::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar */
+}
+
+.anime-img {
+  position: relative;
+  display: inline-block;
+  aspect-ratio: 9/16;
+  height: 14rem;
+  max-width: 10rem;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 5px solid transparent; /* Default border */
+  box-sizing: border-box; /* Ensure border is part of element's total size */
+  transition: transform 0.3s ease;
+}
+
+.anime-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.anime-img:hover {
+  animation: borderAnimation 4s linear infinite; /* Apply animation on hover */
+  transform: scale(1.1);
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #ff2770; /* Starting color */
+  }
+  50% {
+    border-color: #45f3ff; /* Color halfway through animation */
+  }
+  100% {
+    border-color: #ff2770; /* Ending color (same as starting) */
+  }
+}
+
+.navbar-brand img {
+  height: 5rem;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url("/Anime/src/assets/ninja_naruto/njnaruto.ttf");
+}
+
+h1 {
+  font-family: myFont;
+  font-size: 7rem !important;
+  padding-top: 15rem;
+  margin-bottom: 5rem !important;
+  color: white;
+  text-align: center; /* Center align text on mobile */
+  margin-right: 50rem !important;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bi-volume-up-fill {
+  color: aliceblue;
+  display: flex;
+}
+
+/* 🌟 Media Query for 412 x 914 Mobile Devices */
+@media (max-width: 414px) and (max-height: 920px) {
+  .Vcard {
+    gap: 1rem; /* Reduce spacing for a tighter layout */
+    padding: 0.5rem; /* Reduce padding */
+    margin-top: 19rem;
+  }
+
+  .anime-img {
+    height: 14rem; /* Slightly smaller images */
+    max-width: 10rem; /* Reduce max-width */
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 4rem !important; /* Reduce heading size */
+    padding-top: 15rem;
+    margin-bottom: 3rem !important;
+   
+    margin-left: 0rem !important;
+    mix-blend-mode: overlay;
+  }
+
+  .navbar-brand img {
+    
+    height: 5rem; /* Adjust navbar logo size */
+  }
+
+  video {
+    object-fit: cover
+    ; /* Ensure video scales correctly */
+    width: 100% !important;
+  height: 100% !important;
+  }
+}
+
+@media (max-width: 414px) {
+  .Vcard {
+      display: flex;
+      flex-direction:row;
+      overflow-y: auto;
+      max-height: 80vh; /* Limit height for vertical scroll */
+      gap: 1rem;
+      padding: 0.5rem;
+      margin-top: 15rem;
+    }}

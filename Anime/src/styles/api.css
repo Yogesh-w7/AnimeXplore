@@ -1,0 +1,132 @@
+/* Anime List */
+.anime-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); 
+    gap: 20px;
+    padding: 2rem;
+    justify-items: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Apply a subtle effect to the list when any child receives focus (for keyboard navigation) */
+.anime-list:focus-within {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Anime Item Styling */
+.anime-item {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer; /* Indicating that it's interactive */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect on Anime Item */
+.anime-item:hover,
+.anime-item:focus {
+    transform: scale(1.05); /* Slightly enlarging the item */
+    box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.3); 
+    border: 2px solid #F1C40F; /* Adding border on hover/focus */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Image inside Anime Item */
+.anime-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Interactive effect on image for focus or active state */
+.anime-item:active img,
+.anime-item:focus img {
+    transform: scale(1.1); /* Zoom in the image slightly when clicked or focused */
+}
+
+/* Title styling inside Anime Item */
+.anime-item .anime-title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 1.4rem; /* Increased font size for visibility */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the title when hovered over the anime item */
+.anime-item:hover .anime-title {
+    opacity: 1;
+}
+
+/* Interactive effect for Anime Item when active or focused */
+.anime-item:active,
+.anime-item:focus {
+    transform: translateY(-5px); 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #F1C40F; 
+}
+
+/* Heading Styling */
+.heading {
+    color: #F1C40F;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    margin-top: 5rem;
+}
+
+/* Heading Info Styling */
+.heading-info {
+    color: #F1C40F;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .anime-list {
+        padding: 1rem;
+    }
+
+    .anime-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .anime-item img {
+        height: auto;
+        max-height: 200px;
+    }
+}
+
+/* Smooth fade-in animation for the anime list */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.anime-list {
+    animation: fadeIn 0.8s ease-in-out; /* Adding fade-in effect on page load */
+}

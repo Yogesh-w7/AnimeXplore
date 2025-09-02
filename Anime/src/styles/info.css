@@ -1,0 +1,133 @@
+.trailer{
+  justify-self: center;
+  border-radius: 10px;
+  margin-top: 2rem;
+  margin-bottom:3rem;
+}
+
+.watchlist-container {
+  margin-top: 0.rem;
+}
+
+.heading-info {
+  font-size: 1.4rem; /* Adjust info heading for smaller screens */
+  font-weight: bold;
+  justify-self:left;
+}
+
+.back {
+  color: white;
+  background-color: #007bff; /* Example: blue background */
+  border: none; /* Removes the border */
+  padding: 10px 20px; /* Adjusts the padding */
+  font-size: 16px; /* Adjusts the font size */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.back:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+}
+
+
+
+/* Media query for devices with a screen width of 412px or less */
+@media (max-width: 412px) {
+    .heading-t {
+      font-size: 1.5rem; /* Adjust heading size for smaller screens */
+      margin-top:-7rem;
+    }
+  
+    .heading-info {
+      font-size: 1.4rem; /* Adjust info heading for smaller screens */
+      font-weight: bold;
+      justify-self:right;
+    }
+  
+    /* Stack content vertically on small screens */
+    div {
+      flex-direction: column;
+      gap: 15px;
+      padding: 1rem;
+    }
+  
+    /* Style the anime image */
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 0;
+     
+      justify-self: center;
+    }
+  
+    /* Adjust button size and spacing */
+    button {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    
+    }
+
+    .watchlist-container {
+      margin-top: -3rem;
+    }
+  
+    /* Trailer iframe adjustments */
+    iframe {
+      width: 100%;
+      height: 200px;
+      margin-top: 0;
+    }
+  
+    /* Hide the watchlist button for small screens */
+    .watchlist-button {
+      display: none;
+    }
+  }
+
+  .trailer{
+   
+  }
+  
+  /* Media query for devices with a screen width of 768px (larger screens) */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 1.8rem;
+    }
+  
+    .heading-info {
+      font-size: 1.4rem;
+      
+    }
+  
+    div {
+      flex-direction: column;
+      gap: 20px;
+      padding: 1rem;
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+     /* Adjust button size and spacing */
+     button {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    
+    }
+  
+  
+    iframe {
+      width: 100%;
+      height: 250px;
+    }
+  
+    /* Optional: Adjust padding for smaller devices */
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
