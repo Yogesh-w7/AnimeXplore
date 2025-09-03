@@ -1,7 +1,7 @@
-﻿# AnimeXplore
+﻿
 <h1 align="center">
   <i class="fas fa-dragon"> <span style="font-family: 'Chakra Petch', sans-serif; font-size: 48px; background: linear-gradient(90deg,#ff69b4,#00ccff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-  AnimeXplorer</span>  
+  ##AnimeXplorer</span>  
 </h1>
 
 <p align="center">
@@ -115,4 +115,5 @@ npm run start
 ## 📜 License  
 
 This project is licensed under the **MIT License** — feel free to use, modify, and share with proper attribution.  
+
 
